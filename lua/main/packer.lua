@@ -1,7 +1,7 @@
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     -- Colorschemes
-    use 'joshdick/onedark.vim'
+    use 'navarasu/onedark.nvim'
     use 'rose-pine/neovim'
     use { "catppuccin/nvim", as = "catppuccin" }
     use 'rebelot/kanagawa.nvim'
@@ -13,7 +13,6 @@ return require('packer').startup(function(use)
     use 'preservim/nerdtree'
     use 'xiyaowong/nvim-transparent'
     use 'windwp/nvim-autopairs'
-    --use 'vim-airline/vim-airline'
     use 'ap/vim-css-color'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use 'Yggdroot/indentLine'
@@ -27,6 +26,11 @@ return require('packer').startup(function(use)
       'nvim-telescope/telescope.nvim', tag = '0.1.1',
     -- or                            , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use 'akinsho/toggleterm.nvim'
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     -- LSP Support
     use 'neovim/nvim-lspconfig'             -- Required
@@ -44,6 +48,10 @@ return require('packer').startup(function(use)
     --  Snippets
     use 'L3MON4D3/LuaSnip'             -- Required
     use 'rafamadriz/friendly-snippets' -- Optional
+
+    --LF File manager
+    -- Sample configuration is supplied
+    use "lmburns/lf.nvim"
     -- Dashboard
     use {
   'glepnir/dashboard-nvim',

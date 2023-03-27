@@ -1,4 +1,4 @@
------------------------------------------------------
+----------------------------------------------------
 -- ███╗  ██╗███████╗ █████╗ ██╗   ██╗██╗███╗   ███╗--
 -- ████╗ ██║██╔════╝██╔══██╗██║   ██║██║████╗ ████║--
 -- ██╔██╗██║█████╗  ██║  ██║╚██╗ ██╔╝██║██╔████╔██║--
@@ -19,7 +19,6 @@ g.mapleader = " "
 -- Decrease update time
 o.timeoutlen = 500
 o.updatetime = 200
-
 
 -- Number of screen lines to keep above and below the cursor
 o.scrolloff = 8
@@ -76,6 +75,8 @@ vim.cmd([[autocmd BufNewFile,BufRead notas set filetype=rmd]])
 vim.g.indentLine_char_list = { '|', '¦', '┆', '┊' }
 
 --Cursor Line
-o.cursorline = false
+--o.cursorline = true
 
 opt.mouse = "a"
+vim.cmd([[:highlight visual guibg=#666666]])
+

@@ -110,7 +110,7 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\v\0\0\6\0\16\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\a\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\0045\5\v\0>\5\5\0045\5\f\0>\5\6\4=\4\r\0034\4\0\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\vfooter\vcenter\1\0\4\ticon\t \bkey\6s\vaction\15PackerSync\tdesc\16Sync Packer\1\0\4\ticon\n🎓 \bkey\6u\vaction-cd ~/Universidade | Telescope find_files\tdesc\29Search University Folder\1\0\4\ticon\t⚙ \bkey\6d\vaction(cd ~/.config | Telescope find_files\tdesc\20Search Dotfiles\1\0\4\ticon\t \bkey\6v\vaction1cd ~/.config/nvim/lua | Telescope find_files\tdesc\18Search Config\1\0\4\ticon\t \bkey\6n\vaction0cd ~/Documents/Notas | Telescope find_files\tdesc\17Search Notes\1\0\4\ticon\n󰭎 \bkey\6f\vaction\25Telescope find_files\tdesc\19Search Project\vheader\1\0\0\1\r\0\0\5\5\5�\1███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗�\1████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║�\1██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║�\1██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║�\1██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║�\1╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝\5\5\5\1\0\1\ntheme\tdoom\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\v\0\0\6\0\16\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\a\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\0045\5\v\0>\5\5\0045\5\f\0>\5\6\4=\4\r\0034\4\0\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\vfooter\vcenter\1\0\4\ticon\t \vaction\15PackerSync\tdesc\16Sync Packer\bkey\6s\1\0\4\ticon\n🎓 \vaction-cd ~/Universidade | Telescope find_files\tdesc\29Search University Folder\bkey\6u\1\0\4\ticon\t⚙ \vaction(cd ~/.config | Telescope find_files\tdesc\20Search Dotfiles\bkey\6d\1\0\4\ticon\t \vaction1cd ~/.config/nvim/lua | Telescope find_files\tdesc\18Search Config\bkey\6v\1\0\4\ticon\t \vaction0cd ~/Documents/Notas | Telescope find_files\tdesc\17Search Notes\bkey\6n\1\0\4\ticon\n󰭎 \vaction\25Telescope find_files\tdesc\19Search Project\bkey\6f\vheader\1\0\0\1\r\0\0\5\5\5�\1███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗�\1████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║�\1██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║�\1██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║�\1██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║�\1╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝\5\5\5\1\0\1\ntheme\tdoom\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -146,6 +146,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dario/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
+  },
+  ["lf.nvim"] = {
+    loaded = true,
+    path = "/home/dario/.local/share/nvim/site/pack/packer/start/lf.nvim",
+    url = "https://github.com/lmburns/lf.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/dario/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -208,14 +218,15 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/dario/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/nvim-tree/nvim-web-devicons"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/dario/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["onedark.vim"] = {
+  ["onedark.nvim"] = {
     loaded = true,
-    path = "/home/dario/.local/share/nvim/site/pack/packer/start/onedark.vim",
-    url = "https://github.com/joshdick/onedark.vim"
+    path = "/home/dario/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -236,6 +247,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dario/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/home/dario/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-css-color"] = {
     loaded = true,

@@ -3,15 +3,14 @@ function Pintanela(color)
     vim.cmd.colorscheme(color)
     --vim.g.transparent_enabled = true
 
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    --vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
-    -- Selected selected text color
-    --vim.cmd([[:highlight visual guibg=#666666]])
+    -- Selected text color
+    vim.cmd([[:highlight visual guibg=#666666]])
 end
 
 --vim.o.background = 'dark'
-
 vim.o.termguicolors = true
 
-Pintanela("rose-pine")
+Pintanela()
