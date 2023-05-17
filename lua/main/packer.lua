@@ -22,7 +22,6 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'ap/vim-css-color'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-    use 'nvim-tree/nvim-tree.lua'
     use 'ryanoasis/vim-devicons'
     use 'mfussenegger/nvim-jdtls'
     use "lukas-reineke/indent-blankline.nvim"
