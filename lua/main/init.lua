@@ -9,7 +9,8 @@
 
 require("main.keybindings")
 require("main.packer")
-require("main.colors")
+require("main.shortcuts")
+require("main.customFunctions")
 
 local g = vim.g
 local o = vim.o
@@ -64,19 +65,24 @@ o.history = 50
 o.splitright = true
 o.splitbelow = true
 
-vim.g.indentLine_enabled = false
 
 -- Personal options
 --vim.cmd([[autocmd Filetype tex set spellang=pt | set spell]])
+--vim.cmd([[autocmd BufNewFile,BufRead * :IndentLinesEnable]])
 vim.cmd([[autocmd BufNewFile,BufRead */Notas/* set filetype=rmd]])
 vim.cmd([[autocmd BufNewFile,BufRead notas set filetype=rmd]])
---vim.cmd([[autocmd BufNewFile,BufRead * :IndentLinesEnable]])
-
-vim.g.indentLine_char_list = { '|', '¦', '┆', '┊' }
 
 --Cursor Line
---o.cursorline = true
+o.cursorline = true
 
 opt.mouse = "a"
 vim.cmd([[:highlight visual guibg=#666666]])
 
+
+require("indent_blankline").setup {
+    -- for example, context is off by default, use this to turn it on
+    show_current_context = true,
+    show_current_context_start = true,
+}
+
+vim.g.indent_blankline_enabled = false

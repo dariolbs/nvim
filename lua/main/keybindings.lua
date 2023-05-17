@@ -3,15 +3,16 @@ local function map(m, k, v)
 end
 
 --Plugins
-map("n", "<A-w>", "<C-w>w")
-map("n", "<A-i>", ":IndentLinesToggle<CR>")
+map("n", "<A-i>", ":IndentBlanklineToggle<CR>")
+--map("n", "<A-t>", ":lua ToggleFullTrasparency()<CR>")
+map("n", "<A-t>", ":TransparentToggle<CR>")
+map("n", "<A-T>", ":lua ToggleCursorLine()<CR>")
+map("n", "gs", ":Git<CR>")
 
 --Normal mode Bindings
 map("n", ".s", "<Esc>i#!/usr/bin/")
 map("n", "<C-u>", "<C-u>zz")
 map("n", "<C-d>", "<C-d>zz")
-map("n", "<C-j>", ":tabprevious<CR>")
-map("n", "<C-k>", ":tabnext<CR>")
 map("n", "<S-w>", ":w<CR>")
 map("n", "<F1>", "<Esc>")
 map('n', 'n', 'nzzzv')
@@ -28,4 +29,3 @@ map('v', '<space>y', "\"+y")
 
 --Insert Mode Bindings
 map("i", "<F1>", "<Esc>")
-

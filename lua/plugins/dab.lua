@@ -9,8 +9,8 @@ map("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
 map("n", "<leader>dt", ':lua require("dapui").toggle()<CR>')
 
 -- Icons
-vim.fn.sign_define('DapBreakpoint', {text='', texthl='', linehl='', numhl=''})
-vim.fn.sign_define('DabStopped', {text='', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapBreakpoint', {text='', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DabStopped', {text='', texthl='', linehl='', numhl=''})
 
 -- DapUi
 require("dapui").setup()

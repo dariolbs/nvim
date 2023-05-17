@@ -29,16 +29,17 @@ local function lsp_settings()
     })
   end
 
+    --sign({name = 'DiagnosticSignError', text = '✘'})
     sign({name = 'DiagnosticSignError', text = '✘'})
-    sign({name = 'DiagnosticSignWarn', text = ''})
-    sign({name = 'DiagnosticSignHint', text = ''})
-    sign({name = 'DiagnosticSignInfo', text = ''})
+    sign({name = 'DiagnosticSignWarn', text = ''})
+    sign({name = 'DiagnosticSignHint', text = '󰈽'})
+    sign({name = 'DiagnosticSignInfo', text = '󰋽'})
 
 
 
   vim.diagnostic.config({
     virtual_text = true,
-    signs = false,
+    signs = true,
     update_in_insert = false,
     underline = true,
     severity_sort = true,
@@ -100,7 +101,6 @@ for _, server_name in ipairs(get_servers()) do
   })
 end
 
-
 ---
 -- Snippet engine setup
 ---
@@ -111,5 +111,5 @@ luasnip.config.set_config({
   region_check_events = 'InsertEnter',
   delete_check_events = 'InsertLeave'
 })
-
+require'lspconfig'.perlpls.setup{}
 require('luasnip.loaders.from_vscode').lazy_load()

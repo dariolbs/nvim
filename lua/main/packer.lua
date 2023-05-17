@@ -9,16 +9,23 @@ return require('packer').startup(function(use)
     use 'sainnhe/everforest'
     use 'sainnhe/gruvbox-material'
     use { "ellisonleao/gruvbox.nvim" }
+    use 'folke/tokyonight.nvim'
     -- Plugins
-    use 'preservim/nerdtree'
+    use {
+        's1n7ax/nvim-terminal',
+        config = function()
+            vim.o.hidden = true
+            require('nvim-terminal').setup()
+        end,
+    }
     use 'xiyaowong/nvim-transparent'
     use 'windwp/nvim-autopairs'
     use 'ap/vim-css-color'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-    use 'Yggdroot/indentLine'
+    use 'nvim-tree/nvim-tree.lua'
     use 'ryanoasis/vim-devicons'
     use 'mfussenegger/nvim-jdtls'
-    use 'tpope/vim-fugitive'
+    use "lukas-reineke/indent-blankline.nvim"
     use 'mfussenegger/nvim-dap'
     use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-lua/plenary.nvim'
@@ -32,10 +39,16 @@ return require('packer').startup(function(use)
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    -- Navigation
+    use 'ptzz/lf.vim'
+    use 'voldikss/vim-floaterm'
+    -- Git
+    use 'tpope/vim-fugitive'
+    use 'airblade/vim-gitgutter'
     -- LSP Support
-    use 'neovim/nvim-lspconfig'             -- Required
     use 'williamboman/mason.nvim'           -- Optional
     use 'williamboman/mason-lspconfig.nvim' -- Optional
+    use 'neovim/nvim-lspconfig'             -- Required
 
     -- Autocompletion Engine
     use 'hrsh7th/nvim-cmp'         -- Required
@@ -50,8 +63,6 @@ return require('packer').startup(function(use)
     use 'rafamadriz/friendly-snippets' -- Optional
 
     --LF File manager
-    -- Sample configuration is supplied
-    use "lmburns/lf.nvim"
     -- Dashboard
     use {
   'glepnir/dashboard-nvim',
