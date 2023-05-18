@@ -4,8 +4,10 @@ end
 
 --Plugins
 map("n", "<A-i>", ":IndentBlanklineToggle<CR>")
---map("n", "<A-t>", ":lua ToggleFullTrasparency()<CR>")
 map("n", "<A-t>", ":TransparentToggle<CR>")
+map("n", "<C-n>", ":NvimTreeToggle<CR>")
+map("n", "<C-h>", ":tabprev<CR>")
+map("n", "<C-l>", ":tabnext<CR>")
 map("n", "<A-T>", ":lua ToggleCursorLine()<CR>")
 map("n", "gs", ":Git<CR>")
 

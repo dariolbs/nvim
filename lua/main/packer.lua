@@ -1,6 +1,6 @@
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    -- Colorschemes
+    -- STYLE!
     use 'navarasu/onedark.nvim'
     use 'rose-pine/neovim'
     use { "catppuccin/nvim", as = "catppuccin" }
@@ -10,37 +10,37 @@ return require('packer').startup(function(use)
     use 'sainnhe/gruvbox-material'
     use { "ellisonleao/gruvbox.nvim" }
     use 'folke/tokyonight.nvim'
-    -- Plugins
-    use {
-        's1n7ax/nvim-terminal',
-        config = function()
-            vim.o.hidden = true
-            require('nvim-terminal').setup()
-        end,
-    }
     use 'xiyaowong/nvim-transparent'
-    use 'windwp/nvim-autopairs'
+    -- BETTER UI EXPERIENCE
+    -- Nvim tree
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional
+      },
+    }
     use 'ap/vim-css-color'
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use 'ryanoasis/vim-devicons'
-    use 'mfussenegger/nvim-jdtls'
     use "lukas-reineke/indent-blankline.nvim"
     use 'mfussenegger/nvim-dap'
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+        end
+    }
     use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-lua/plenary.nvim'
+    -- Telescope! 󰭎
     use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    -- or                            , branch = '0.1.x',
+      'nvim-telescope/telescope.nvim', branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use 'akinsho/toggleterm.nvim'
+    -- Lualine
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    -- Navigation
-    use 'ptzz/lf.vim'
-    use 'voldikss/vim-floaterm'
     -- Git
     use 'tpope/vim-fugitive'
     use 'airblade/vim-gitgutter'
@@ -48,6 +48,7 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'           -- Optional
     use 'williamboman/mason-lspconfig.nvim' -- Optional
     use 'neovim/nvim-lspconfig'             -- Required
+    use 'mfussenegger/nvim-jdtls'           -- Extra jdtls
 
     -- Autocompletion Engine
     use 'hrsh7th/nvim-cmp'         -- Required
@@ -61,7 +62,7 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'             -- Required
     use 'rafamadriz/friendly-snippets' -- Optional
 
-    --LF File manager
+    use 'windwp/nvim-autopairs'
     -- Dashboard
     use {
   'glepnir/dashboard-nvim',

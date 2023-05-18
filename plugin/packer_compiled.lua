@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/dario/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/dario/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   catppuccin = {
     loaded = true,
     path = "/home/dario/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -110,7 +115,7 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\v\0\0\6\0\16\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\a\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\0045\5\v\0>\5\5\0045\5\f\0>\5\6\4=\4\r\0034\4\0\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\vfooter\vcenter\1\0\4\tdesc\16Sync Packer\bkey\6s\vaction\15PackerSync\ticon\t \1\0\4\tdesc\29Search University Folder\bkey\6u\vaction-cd ~/Universidade | Telescope find_files\ticon\n🎓 \1\0\4\tdesc\20Search Dotfiles\bkey\6d\vaction(cd ~/.config | Telescope find_files\ticon\t⚙ \1\0\4\tdesc\18Search Config\bkey\6v\vaction1cd ~/.config/nvim/lua | Telescope find_files\ticon\t \1\0\4\tdesc\17Search Notes\bkey\6n\vaction0cd ~/Documents/Notas | Telescope find_files\ticon\t \1\0\4\tdesc\19Search Project\bkey\6f\vaction\25Telescope find_files\ticon\n󰭎 \vheader\1\0\0\1\r\0\0\5\5\5�\1███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗�\1████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║�\1██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║�\1██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║�\1██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║�\1╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝\5\5\5\1\0\1\ntheme\tdoom\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\v\0\0\6\0\16\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\a\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\0045\5\v\0>\5\5\0045\5\f\0>\5\6\4=\4\r\0034\4\0\0=\4\14\3=\3\15\2B\0\2\1K\0\1\0\vconfig\vfooter\vcenter\1\0\4\ticon\t \vaction\15PackerSync\tdesc\16Sync Packer\bkey\6s\1\0\4\ticon\n🎓 \vaction-cd ~/Universidade | Telescope find_files\tdesc\29Search University Folder\bkey\6u\1\0\4\ticon\t⚙ \vaction(cd ~/.config | Telescope find_files\tdesc\20Search Dotfiles\bkey\6d\1\0\4\ticon\t \vaction1cd ~/.config/nvim/lua | Telescope find_files\tdesc\18Search Config\bkey\6v\1\0\4\ticon\t \vaction0cd ~/Documents/Notas | Telescope find_files\tdesc\17Search Notes\bkey\6n\1\0\4\ticon\n󰭎 \vaction\25Telescope find_files\tdesc\19Search Project\bkey\6f\vheader\1\0\0\1\r\0\0\5\5\5�\1███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗�\1████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║�\1██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║�\1██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║�\1██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║�\1╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝\5\5\5\1\0\1\ntheme\tdoom\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -146,11 +151,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dario/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
-  },
-  ["lf.vim"] = {
-    loaded = true,
-    path = "/home/dario/.local/share/nvim/site/pack/packer/start/lf.vim",
-    url = "https://github.com/ptzz/lf.vim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -202,12 +202,6 @@ _G.packer_plugins = {
     path = "/home/dario/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-terminal"] = {
-    config = { "\27LJ\2\nX\0\0\3\0\6\0\n6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0B\0\1\1K\0\1\0\nsetup\18nvim-terminal\frequire\vhidden\6o\bvim\0" },
-    loaded = true,
-    path = "/home/dario/.local/share/nvim/site/pack/packer/start/nvim-terminal",
-    url = "https://github.com/s1n7ax/nvim-terminal"
-  },
   ["nvim-transparent"] = {
     loaded = true,
     path = "/home/dario/.local/share/nvim/site/pack/packer/start/nvim-transparent",
@@ -224,10 +218,9 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/dario/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    loaded = true,
+    path = "/home/dario/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["onedark.nvim"] = {
     loaded = true,
@@ -255,6 +248,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0" },
     loaded = true,
     path = "/home/dario/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
@@ -274,11 +268,6 @@ _G.packer_plugins = {
     path = "/home/dario/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
   },
-  ["vim-floaterm"] = {
-    loaded = true,
-    path = "/home/dario/.local/share/nvim/site/pack/packer/start/vim-floaterm",
-    url = "https://github.com/voldikss/vim-floaterm"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/dario/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -292,10 +281,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-terminal
-time([[Config for nvim-terminal]], true)
-try_loadstring("\27LJ\2\nX\0\0\3\0\6\0\n6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0B\0\1\1K\0\1\0\nsetup\18nvim-terminal\frequire\vhidden\6o\bvim\0", "config", "nvim-terminal")
-time([[Config for nvim-terminal]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
