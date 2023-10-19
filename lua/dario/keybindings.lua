@@ -3,23 +3,17 @@ local function map(m, k, v)
 end
 
 --Plugins
-map("n", "<A-i>", ":IndentBlanklineToggle<CR>")
 map("n", "<A-t>", ":TransparentToggle<CR>")
-map("n", "<C-n>", ":NvimTreeToggle<CR>")
-map("n", "<C-h>", ":tabprev<CR>")
-map("n", "<C-l>", ":tabnext<CR>")
-map("n", "<A-T>", ":lua ToggleCursorLine()<CR>")
 map("n", "gs", ":Git<CR>")
 
 --Normal mode Bindings
 map("n", ".s", "<Esc>i#!/usr/bin/")
 map("n", "<C-u>", "<C-u>zz")
 map("n", "<C-d>", "<C-d>zz")
-map("n", "<S-w>", ":w<CR>")
-map("n", "<F1>", "<Esc>")
+map("n", "<C-f>", "<C-f>zz")
+map("n", "<C-b>", "<C-b>zz")
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
-map('n', '<A-w>', '<C-w>w')
 
 --Visual Mode Bindings
 map("v", "<C-u>", "<C-u>zz")

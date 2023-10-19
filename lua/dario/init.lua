@@ -7,16 +7,16 @@
 -- ╚═╝  ╚══╝╚══════╝ ╚════╝    ╚═╝   ╚═╝╚═╝     ╚═╝--
 -----------------------------------------------------
 
-require("main.keybindings")
-require("main.packer")
-require("main.shortcuts")
-require("main.customFunctions")
+require("dario.pckr")
+require("dario.keybindings")
+require("dario.functions")
 
 local g = vim.g
 local o = vim.o
 local opt = vim.opt
 
 g.mapleader = " "
+
 -- Decrease update time
 o.timeoutlen = 500
 o.updatetime = 200
@@ -65,24 +65,43 @@ o.history = 50
 o.splitright = true
 o.splitbelow = true
 
+vim.g.tex_flavor = "latex"
+
 
 -- Personal options
 --vim.cmd([[autocmd Filetype tex set spellang=pt | set spell]])
 --vim.cmd([[autocmd BufNewFile,BufRead * :IndentLinesEnable]])
+
 vim.cmd([[autocmd BufNewFile,BufRead */Notas/* set filetype=rmd]])
 vim.cmd([[autocmd BufNewFile,BufRead notas set filetype=rmd]])
+vim.cmd([[autocmd BufNewFile,BufRead *.txt set spell | set filetype=txt]])
 
 --Cursor Line
-o.cursorline = true
+o.cursorline = false
 
 opt.mouse = "a"
 vim.cmd([[:highlight visual guibg=#666666]])
 
 
-require("indent_blankline").setup {
-    -- for example, context is off by default, use this to turn it on
-    show_current_context = true,
-    show_current_context_start = true,
-}
+--require("indent_blankline").setup {
+--    -- for example, context is off by default, use this to turn it on
+--    show_current_context = true,
+--    show_current_context_start = false,
+--}
 
-vim.g.indent_blankline_enabled = false
+-- Colorscheme
+
+local colorscheme = "evening"
+
+-- vim.g.indent_blankline_enabled = true
+
+vim.o.background = 'dark'
+vim.o.termguicolors = 'true'
+
+vim.cmd.colorscheme(colorscheme)
+
+-- Transparent Background
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })

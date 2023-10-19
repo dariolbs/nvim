@@ -2,13 +2,40 @@
 -- Learn to configure LSP servers, see :help lsp-zero-api-showcase
 --local lsp = require('lsp-zero')
 
-require("mason").setup()
-
 require("nvim-autopairs").setup {}
 
 local cmp = require('cmp')
 
 local cmp_select = { behaviour = cmp.SelectBehavior.Select}
+
+local cmp_kinds = {
+  Text = "  ",
+  Method = "󰆧  ",
+  Function = "󰊕  ",
+  Constructor = "  ",
+  Field = "󰇽  ",
+  Variable = "󰂡  ",
+  Class = "󰠱  ",
+  Interface = "  ",
+  Module = "  ",
+  Property = "󰜢  ",
+  Unit = "  ",
+  Value = "󰎠  ",
+  Enum = "  ",
+  Keyword = "󰌋  ",
+  Snippet = "  ",
+  Color = "󰏘  ",
+  File = "󰈙  ",
+  Reference = "  ",
+  Folder = "󰉋  ",
+  EnumMember = "  ",
+  Constant = "󰏿  ",
+  Struct = "  ",
+  Event = "  ",
+  Operator = "󰆕  ",
+  TypeParameter = "󰅲  ",
+}
+
 
 cmp.setup({
 
@@ -16,6 +43,13 @@ cmp.setup({
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
         require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        end,
+    },
+    -- Display icons
+    formatting = {
+        format = function(_, vim_item)
+          vim_item.kind = (cmp_kinds[vim_item.kind] or '') .. vim_item.kind
+          return vim_item
         end,
     },
     window = {
@@ -43,5 +77,5 @@ cmp.setup({
       { name = 'path' },
       }, {
       { name = 'buffer' },
-    })
+    });
   })

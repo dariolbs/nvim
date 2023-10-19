@@ -1,3 +1,6 @@
+-- Personal settings
+require("dario")
+-- Plugin settings
 require("plugins")
-require("style")
-require("main")
+-- Lsp settings
+require("lsp")
