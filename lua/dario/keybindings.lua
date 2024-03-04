@@ -7,13 +7,18 @@ map("n", "<A-t>", ":TransparentToggle<CR>")
 map("n", "gs", ":Git<CR>")
 
 --Normal mode Bindings
-map("n", ".s", "<Esc>i#!/usr/bin/")
 map("n", "<C-u>", "<C-u>zz")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-f>", "<C-f>zz")
 map("n", "<C-b>", "<C-b>zz")
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
+
+-- ,q -> Insert double quotes in 
+map('n', ',q', 'Bi"<Esc>Ea"<Esc>')
+-- ,s -> Insert shebang
+map("n", ",s", "<Esc>i#!/usr/bin/")
+
 
 --Visual Mode Bindings
 map("v", "<C-u>", "<C-u>zz")

@@ -36,38 +36,34 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
+local sign = function(opts)
+    vim.fn.sign_define(opts.name, {
+        texthl = opts.name,
+        text = opts.text,
+        numhl = ''
+    })
+end
+
 local function lsp_settings()
 
-    local sign = function(opts)
-        vim.fn.sign_define(opts.name, {
-            texthl = opts.name,
-            text = opts.text,
-            numhl = ''
-        })
-    end
+vim.diagnostic.config({
 
-    -- Symbols
-    sign({name = 'DiagnosticSignError', text = 'E'})
-    sign({name = 'DiagnosticSignWarn', text = 'W'})
-    sign({name = 'DiagnosticSignHint', text = 'H'})
-    sign({name = 'DiagnosticSignInfo', text = 'I'})
+    virtual_text = true,
+    signs = true,
+    update_in_insert = false,
+    underline = true,
+    severity_sort = true,
 
-    vim.diagnostic.config({
-        virtual_text = true,
-        signs = true,
-        update_in_insert = false,
-        underline = true,
-        severity_sort = true,
-        float = {
-            focusable = false,
-            style = 'minimal',
-            -- border = 'rounded',
-            border = 'single',
-            source = 'always',
-            header = '',
-            prefix = '',
-        },
-    })
+    float = {
+        focusable = false,
+        style = 'minimal',
+        -- border = 'rounded',
+        border = 'single',
+        source = 'always',
+        header = '',
+        prefix = '',
+    },
+})
 
     vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
     vim.lsp.handlers.hover,
@@ -101,6 +97,38 @@ local luasnip = require('luasnip')
 luasnip.config.set_config({
     region_check_events = 'InsertEnter',
     delete_check_events = 'InsertLeave'
+})
+
+
+-- Chad symbols
+-- sign({name = 'DiagnosticSignError', text = 'E'})
+-- sign({name = 'DiagnosticSignWarn', text = 'W'})
+-- sign({name = 'DiagnosticSignHint', text = 'H'})
+-- sign({name = 'DiagnosticSignInfo', text = 'I'})
+
+-- Virgin symbols
+sign({name = 'DiagnosticSignError', text = ''})
+sign({name = 'DiagnosticSignWarn', text = ''})
+sign({name = 'DiagnosticSignHint', text = ''})
+sign({name = 'DiagnosticSignInfo', text = ''})
+
+vim.diagnostic.config({
+
+    virtual_text = true,
+    signs = true,
+    update_in_insert = false,
+    underline = true,
+    severity_sort = true,
+
+    float = {
+        focusable = false,
+        style = 'minimal',
+        -- border = 'rounded',
+        -- border = 'single',
+        source = 'always',
+        header = '',
+        prefix = '',
+    },
 })
 
 require('luasnip.loaders.from_vscode').lazy_load()

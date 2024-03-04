@@ -5,7 +5,7 @@ local config = {
   cmd = {
 
     -- 💀
-    'java', -- or '/path/to/java17_or_newer/bin/java'
+    '/usr/lib/jvm/java-21-openjdk/bin/java', -- or '/path/to/java17_or_newer/bin/java'
             -- depends on if `java` is in your $PATH env variable and if it points to the right version.
 
     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
@@ -19,22 +19,20 @@ local config = {
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
 
     -- 💀
-    '-jar', '/home/dario/.tools/ecliplse-jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+    '-jar', '/home/dario/.tools/jdtls/plugins/org.eclipse.equinox.launcher_1.6.700.v20231129-1311.jar',
          -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
          -- Must point to the                                                     Change this to
          -- eclipse.jdt.ls installation                                           the actual version
 
-
     -- 💀
-    '-configuration', '/home/dario/.tools/ecliplse-jdtls/config_linux',
+    '-configuration', '/home/dario/.tools/jdtls/config_linux',
                     -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
                     -- Must point to the                      Change to one of `linux`, `win` or `mac`
                     -- eclipse.jdt.ls installation            Depending on your system.
 
-
     -- 💀
     -- See `data directory configuration` section in the README
-    '-data', '/home/dario/.tools/ecliplse-jdtls/data'
+    '-data', '/home/dario/.tools/jdtls/data'
   },
 
   -- 💀

@@ -22,6 +22,7 @@ require('pckr').add{
     'wbthomason/packer.nvim',
 
     -- Colorschemes
+    'sainnhe/gruvbox-material',
     'ellisonleao/gruvbox.nvim',
     { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
 
@@ -35,8 +36,15 @@ require('pckr').add{
     -- Css color
     'ap/vim-css-color',
 
+    -- IndentLine
+    "lukas-reineke/indent-blankline.nvim",
+
     -- Toggleterm
     "akinsho/toggleterm.nvim",
+
+    -- Lualine
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
 
     -- Telescope
     {

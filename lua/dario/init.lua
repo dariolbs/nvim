@@ -1,4 +1,4 @@
-----------------------------------------------------
+-----------------------------------------------------
 -- ███╗  ██╗███████╗ █████╗ ██╗   ██╗██╗███╗   ███╗--
 -- ████╗ ██║██╔════╝██╔══██╗██║   ██║██║████╗ ████║--
 -- ██╔██╗██║█████╗  ██║  ██║╚██╗ ██╔╝██║██╔████╔██║--
@@ -6,8 +6,9 @@
 -- ██║ ╚███║███████╗╚█████╔╝  ╚██╔╝  ██║██║ ╚═╝ ██║--
 -- ╚═╝  ╚══╝╚══════╝ ╚════╝    ╚═╝   ╚═╝╚═╝     ╚═╝--
 -----------------------------------------------------
+-- Tantantantantan
 
-require("dario.pckr")
+require("dario.lazy")
 require("dario.keybindings")
 require("dario.functions")
 
@@ -72,36 +73,26 @@ vim.g.tex_flavor = "latex"
 --vim.cmd([[autocmd Filetype tex set spellang=pt | set spell]])
 --vim.cmd([[autocmd BufNewFile,BufRead * :IndentLinesEnable]])
 
-vim.cmd([[autocmd BufNewFile,BufRead */Notas/* set filetype=rmd]])
-vim.cmd([[autocmd BufNewFile,BufRead notas set filetype=rmd]])
 vim.cmd([[autocmd BufNewFile,BufRead *.txt set spell | set filetype=txt]])
-
---Cursor Line
-o.cursorline = false
 
 opt.mouse = "a"
 vim.cmd([[:highlight visual guibg=#666666]])
 
-
---require("indent_blankline").setup {
---    -- for example, context is off by default, use this to turn it on
---    show_current_context = true,
---    show_current_context_start = false,
---}
-
--- Colorscheme
-
-local colorscheme = "evening"
-
 -- vim.g.indent_blankline_enabled = true
-
+vim.g.gruvbox_material_background = 'hard'
 vim.o.background = 'dark'
 vim.o.termguicolors = 'true'
 
+o.cursorline = true
+
+local colorscheme = os.getenv("NVIM_COLORSCHEME") or "gruvbox"
+
+-- ?????? lmao
+vim.cmd.colorscheme("gruvbox")
 vim.cmd.colorscheme(colorscheme)
 
--- Transparent Background
-
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+if os.getenv("NVIM_TRANSPARENT") == "y" then
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+    vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+end
