@@ -16,10 +16,11 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 require("lazy").setup({
 
     -- Colorschemes
-    'sainnhe/gruvbox-material',
     'ellisonleao/gruvbox.nvim',
-    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
-    'altercation/vim-colors-solarized',
+    'navarasu/onedark.nvim',
+    "rebelot/kanagawa.nvim",
+    'sainnhe/gruvbox-material',
+    'sainnhe/sonokai',
 
     -- Icons
     'nvim-tree/nvim-web-devicons',
@@ -27,6 +28,7 @@ require("lazy").setup({
     -- Debugging
     'mfussenegger/nvim-dap',
     { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} },
+    'nvim-neotest/nvim-nio',
 
     -- Treesitter
     'nvim-treesitter/nvim-treesitter',
