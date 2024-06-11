@@ -4,6 +4,7 @@ require("plugins.treesitter")
 require("plugins.lualine")
 require("plugins.telescope")
 require("plugins.colorschemes")
+-- require("plugins.bufferline")
 require("plugins.idl")
 
 -- if not os.getenv("NVIM_NO_LUALINE")

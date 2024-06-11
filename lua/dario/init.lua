@@ -6,7 +6,6 @@
 -- ██║ ╚███║███████╗╚█████╔╝  ╚██╔╝  ██║██║ ╚═╝ ██║--
 -- ╚═╝  ╚══╝╚══════╝ ╚════╝    ╚═╝   ╚═╝╚═╝     ╚═╝--
 -----------------------------------------------------
--- Tantantantantan
 
 require("dario.lazy")
 require("dario.keybindings")
@@ -68,16 +67,15 @@ o.splitbelow = true
 
 vim.g.tex_flavor = "latex"
 
-
 -- Personal options
 --vim.cmd([[autocmd Filetype tex set spellang=pt | set spell]])
 --vim.cmd([[autocmd BufNewFile,BufRead * :IndentLinesEnable]])
 
-vim.cmd([[autocmd BufNewFile,BufRead *.txt set spell | set filetype=txt]])
+-- vim.cmd([[autocmd BufNewFile,BufRead *.txt set spell | set filetype=txt]])
 
 opt.mouse = "a"
 
-vim.o.termguicolors = 'true'
+vim.o.termguicolors = true
 vim.g.gruvbox_material_background = 'hard'
 vim.o.background = 'dark'
 o.cursorline = true
